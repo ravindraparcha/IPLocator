@@ -50,13 +50,6 @@ namespace IPLocator.Web.Controllers
             string placeApiUrl = ConfigurationManager.AppSettings["GoogleApiUrl"].Replace("@:", "&");
             List<PlacesInfo> placesInfo = new List<PlacesInfo>();
            
-            //placeApiUrl = placeApiUrl.Replace("@:", "&");
-            //placeApiUrl = placeApiUrl.Replace("{0}", lat);
-            //placeApiUrl = placeApiUrl.Replace("{1}", longi);
-            //placeApiUrl = placeApiUrl.Replace("{2}", radius);
-            //placeApiUrl = placeApiUrl.Replace("{3}", place);
-            //placeApiUrl = placeApiUrl.Replace("{4}", ConfigurationManager.AppSettings["GoogleAPIServerKey"]);
-
             placeApiUrl = string.Format(placeApiUrl, lat, longi, radius, place, ConfigurationManager.AppSettings["GoogleAPIServerKey"]);
 
             var result = new System.Net.WebClient().DownloadString(placeApiUrl);
