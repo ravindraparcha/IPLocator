@@ -1,0 +1,214 @@
+﻿
+@{
+    var notAvailable = "Not Available";
+}
+
+@model IPLocator.Web.Models.IPDetails
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IP Address Information</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Country</td>
+                <td>
+                    @{
+                        if (string.IsNullOrEmpty(Model.CountryName))
+                        {
+                            <text>@notAvailable</text>
+                        }
+                        else
+                        { <text>@Model.CountryName</text> }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Country ISO Code</td>
+                <td>
+                    @{
+                        if (string.IsNullOrEmpty(Model.CountryISOCode))
+                        {
+                            <text>@notAvailable</text>
+                        }
+                        else
+                        { <text>@Model.CountryISOCode</text> }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td>
+                    @{
+                        if (string.IsNullOrEmpty(Model.SubdivisionName1))
+                        {
+                            <text>@notAvailable</text>
+                        }
+                        else
+                        { <text>@Model.SubdivisionName1</text> }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    @{
+                    if (string.IsNullOrEmpty(Model.City))
+                    {
+                        <text>@notAvailable</text>
+                    }
+                    else
+                    { <text>@Model.City</text> }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Locale Code</td>
+            <td>
+                @{
+                    if (string.IsNullOrEmpty(Model.LocaleCode))
+                    {
+                        <text>@notAvailable</text>
+                    }
+                    else
+                    { <text>@Model.LocaleCode</text> }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Continent Code</td>
+            <td>
+                @{
+                    if (string.IsNullOrEmpty(Model.ContinentCode))
+                    {
+                        <text>@notAvailable</text>
+                    }
+                    else
+                    { <text>@Model.ContinentCode</text> }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Continent Name</td>
+            <td>
+                @{
+                    if (string.IsNullOrEmpty(Model.ContinentName))
+                    {
+                        <text>@notAvailable</text>
+                    }
+                    else
+                    { <text>@Model.ContinentName</text> }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Metro Code</td>
+            <td>
+                @{
+                if (string.IsNullOrEmpty(Model.MetroCode))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.MetroCode</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Time Zone</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.TimeZone))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.TimeZone</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Latitude</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.Latitude))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.Latitude</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Longitude</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.Longitude))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.Longitude</text> }
+            }
+        </td>
+    </tr>
+
+    <tr>
+        <td>Subdivision ISO Code(1)</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.SubdivisionISOCode1))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.SubdivisionISOCode1</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Subdivision Name(1)</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.SubdivisionName1))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.SubdivisionName1</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Subdivision ISO Code(2)</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.SubdivisionISOCode2))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.SubdivisionISOCode2</text> }
+            }
+        </td>
+    </tr>
+    <tr>
+        <td>Subdivision Name(2)</td>
+        <td>
+            @{
+                if (string.IsNullOrEmpty(Model.SubdivisionName2))
+                {
+                    <text>@notAvailable</text>
+                }
+                else
+                { <text>@Model.SubdivisionName2</text> }
+            }
+        </td>
+    </tr>
+
+</tbody>
+</table>

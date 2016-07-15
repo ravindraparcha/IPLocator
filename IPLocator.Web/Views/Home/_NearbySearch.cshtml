@@ -1,0 +1,26 @@
+﻿@model IEnumerable<IPLocator.Web.Models.PlacesInfo>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Near By Places - @Model.Count() results</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var place in Model)
+            {
+            <tr>
+                <td>
+                    <span>@place.name</span><span>(@place.vicinity)</span>
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+
+
+
